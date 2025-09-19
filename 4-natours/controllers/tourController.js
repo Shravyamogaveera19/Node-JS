@@ -36,6 +36,7 @@ exports.getAlltours = async (req, res) => {
     }else{
       query = query.select('-__v');
     }
+    
     //EXECUTE QUERY
     const tours = await query;
 
