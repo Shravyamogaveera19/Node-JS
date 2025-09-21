@@ -14,10 +14,6 @@ exports.getAlltours = async (req, res) => {
     //1B)Advances Filtering
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
-    console.log(JSON.parse(queryStr));
-    //{difficulty: 'easy', duration: {$gte: 5}}
-    //{difficulty: 'easy', duration: {gte:'5'}}
-    //gte,gt,lte,lt
     let query = Tour.find(JSON.parse(queryStr));
 
     //2)SORTING
