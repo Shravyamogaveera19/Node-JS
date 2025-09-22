@@ -1,9 +1,7 @@
 const Tour = require('../models/tourModel');
 
 exports.getAlltours = async (req, res) => {
-
   try {
-
     console.log(req.query);
     //BUILD QUERY
     //1A)Filtering
@@ -51,7 +49,6 @@ exports.getAlltours = async (req, res) => {
     });
   }
 };
-
 exports.createTour = async (req, res) => {
   try {
     const newTour = await Tour.create(req.body);
